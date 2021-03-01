@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ddd
+title: 
 ---
 
 # 今更ですが、Markdownについてまとめてみます
