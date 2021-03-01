@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 
+title: トップページですよ
 ---
 
 # 今更ですが、Markdownについてまとめてみます
