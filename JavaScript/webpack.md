@@ -46,7 +46,7 @@ module.exports.sub1text = function() {
 
 sub2.js
 
-```JavaScript:sub2.js
+```js
 module.exports.sub2text = function() {
         console.log("sub2.jsです。");
 }
@@ -58,7 +58,7 @@ module.exports.sub2text = function() {
 
 index.js
 
-```JavaScript:index.js
+```js
 //まとめたいファイルをインポート
 var sub1 = require(./sub1.js);
 var sub2 = require(./sub2.js);
