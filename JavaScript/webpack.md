@@ -146,4 +146,5 @@ module.exports.module.rules[0].use[1] = 'css-loader';
 
 ### 参考資料
 
-わかりにくいwebpackをわかりやすく解説！ webpack.config.jsをスラスラ読む方法 https://youtu.be/gdQx7bnQCrs
+わかりにくいwebpackをわかりやすく解説！
+[webpack.config.jsをスラスラ読む方法](https://youtu.be/gdQx7bnQCrs)
