@@ -38,7 +38,7 @@ CSSを結合するには**style-loader、css-loader**が必要。
 
 sub1.js
 
-```JavaScript:sub1.js
+```js
 module.exports.sub1text = function() {
         console.log("sub1.jsです。");
 }
@@ -74,7 +74,7 @@ webpack.config.jsはwebpackの設定ファイルです。
 
 webpack.config.js
 
-```JavaScript:webpack.config.js
+```js
 module.exports = {
         entry: "./index.js",
         output: {
@@ -91,7 +91,7 @@ entryにエントリーポイントファイルを書いて、outputに、バン
 
 module.exports内の記述で「test」というプロパティがプロパティ名からは想像がつきにくいが「ルールに該当するファイル」を表します。
 
-```JavaScript:webpack.config.js
+```js
 const path = require('path');
 
 module.exports = {
@@ -116,7 +116,7 @@ module.exports = {
 ちなみに上のコードは下のコードでも通ります。
 当たり前なのですが、JavaScript構文の理解がふわふわだと設定ファイルが読めずに困惑しますよね
 
-```JavaScript:webpack.config.js
+```js
 const path = require('path');
 
 module.exports = {
