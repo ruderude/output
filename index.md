@@ -10,8 +10,7 @@ title: トップページですよ
 
 ##　もくじ
 
-[webpackについて](./JavaScript/webpack.md)
-
+[webpackについて](./JavaScript/webpack.md)  
 [Laravelでログイン後、直前のページに遷移したい](./laravel/auth_redirect.md)
 
 
@@ -27,9 +26,9 @@ title: トップページですよ
 1. Markdown 文書内にコードをソースコードを埋め込むことができる（実行できるわけではない）。特に技術方面では、文章とそれを補完するコードのパートという構成を作りやすい
 1. 単なる文書フォーマットのため、特定のエディタに依存することなく文章が書ける
 
-[webpackについて](./JavaScript/webpack.md)  
+[webpackについて](./JavaScript/webpack.md)
 [Laravelでログイン後、直前のページに遷移したい](./laravel/auth_redirect.md)  
-[セカンドページ](./second.md)<br>
+[セカンドページ](./second.md)
 [ビヨンドのコーポレートサイト](https://beyondjapan.com)
 
 ```php
