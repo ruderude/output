@@ -13,9 +13,9 @@
 `$redirectTo`にリダイレクト先が入っています。
 `RouteServiceProvider::HOME`は定数で`Providers\RouteServiceProvider.php`にあります。
 
-`LoginController`
-
 ```php
+//LoginController.php
+
 class LoginController extends Controller
 {
     /*
@@ -56,9 +56,9 @@ class LoginController extends Controller
 
 <br>
 
-`RouteServiceProvider.php`
-
 ```php
+//RouteServiceProvider.php
+
     /**
      * The path to the "home" route for your application.
      *
@@ -74,9 +74,8 @@ class LoginController extends Controller
 ログインできた後は `redirect()->intended($this->redirectPath());` を呼んでいます。
 これは、認証フィルターでキャッチされる前にアクセスしたURLへリダイレクトさせる処理です。
 
-`AuthenticatesUsers.php`
-
 ```php
+//AuthenticatesUsers.php
     /**
      * Send the response after the user was authenticated.
      *
@@ -118,9 +117,9 @@ instended は「意図された」という意味で機能は以下。
 このタイミングで直前のページを 'url.instended' セッションに設定します。
 これで認証フィルターと同じ流れになり、ログイン画面直前にいたページに遷移されるはずです。
 
-`LoginController.php`
-
  ```php
+//LoginController.php
+
     /**
      * Show the application's login form.
      *
@@ -150,9 +149,9 @@ instended は「意図された」という意味で機能は以下。
 新規登録画面でも同じ仕様にしたいですが、ログインと同じやり方では上手くいきませんでした。
 そこで、フォームに `url()->previous()` を仕込み、その値をバックエンド側でリダイレクトする作戦にしました。
 
-`register.blade.php`
-
 ```php
+//register.blade.php
+
 //・・・省略・・・
 
 <form method="POST" action="{{ route('register') }}">
@@ -171,10 +170,10 @@ instended は「意図された」という意味で機能は以下。
 ↑
 バリデーションに引っかかった時用にoldヘルパー関数でセッション値を仕込みます。
 これで直前のページをバックエンドへ送ったあと、`RegistersUsers.php`トレイトの`registeredメソッド`をレジスターコントローラーでオーバーライドします。
-_
-`RegisterController.php`
 
-```php:RegisterController
+```php
+//RegisterController.php
+
 //・・・省略・・・
 
     /**
