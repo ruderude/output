@@ -10,9 +10,9 @@ title: トップページですよ
 
 ##　もくじ
 
-[webpackについて](./JavaScript/webpack.md)へのリンクになります。
+[webpackについて](./JavaScript/webpack.md)
 
-[Laravelでログイン後、直前のページに遷移したい](./laravel/auth_redirect.md)へのリンクになります。
+[Laravelでログイン後、直前のページに遷移したい](./laravel/auth_redirect.md)
 
 
 ## Markdown という文書フォーマットをご存知の方は多数いると思いますし、常用されている方も多いと思います
