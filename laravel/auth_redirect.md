@@ -10,6 +10,9 @@
 
 ## デフォルトはHome画面に遷移するようになっています
 
+`$redirectTo`にリダイレクト先が入っています。
+`RouteServiceProvider::HOME`は定数で`Providers\RouteServiceProvider.php`にあります。
+
 `LoginController`
 
 ```php
