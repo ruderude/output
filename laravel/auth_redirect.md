@@ -153,7 +153,7 @@ instended は「意図された」という意味で機能は以下。
 `register.blade.php`
 
 ```php
-・・・省略・・・
+//・・・省略・・・
 
 <form method="POST" action="{{ route('register') }}">
     @csrf
@@ -164,7 +164,7 @@ instended は「意図された」という意味で機能は以下。
         <input type="hidden" name="previous_url" value="{{ old('previous_url') }}">
     @endif
 
-    ・・・省略・・・
+    //・・・省略・・・
 
 ```
 
@@ -175,7 +175,7 @@ _
 `LoginController.php`
 
 ```php
-・・・省略・・・
+//・・・省略・・・
 
     /**
      * The user has been registered.
