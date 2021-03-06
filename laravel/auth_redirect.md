@@ -172,9 +172,9 @@ instended は「意図された」という意味で機能は以下。
 バリデーションに引っかかった時用にoldヘルパー関数でセッション値を仕込みます。
 これで直前のページをバックエンドへ送ったあと、`RegistersUsers.php`トレイトの`registeredメソッド`をレジスターコントローラーでオーバーライドします。
 _
-`LoginController.php`
+`RegisterController.php`
 
-```php
+```php:RegisterController
 //・・・省略・・・
 
     /**
