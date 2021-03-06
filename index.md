@@ -21,7 +21,7 @@ title: トップページですよ
 1. 単なる文書フォーマットのため、特定のエディタに依存することなく文章が書ける
 
 [webpackについて](./JavaScript/webpack.md)へのリンクになります。
-
+[Laravelでログイン後、直前のページに遷移したい](./laravel/auth_redirect.md)へのリンクになります。
 [セカンドページ](./second.md)へのリンクになります。
 
 [ビヨンドのコーポレートサイト](https://beyondjapan.com)へのリンクになります。
