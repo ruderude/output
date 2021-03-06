@@ -50,11 +50,28 @@ class LoginController extends Controller
 }
 ```
 
-とりあえず定数で保持されていて、そこを変えたりRoleごとに変更したりする記事はいくつか確認。
+<br>
+
+とりあえず定数で保持されていて、通常ログイン後のリダイレクトを変更したりするのはここを変更すればOKです。
+
+<br>
+
+`RouteServiceProvider.php`
+
+```php
+    /**
+     * The path to the "home" route for your application.
+     *
+     * @var string
+     */
+    public const HOME = '/home'; // <=ここ
+```
+
+<br>
 
 ### トレイトのAuthenticatesUsers.phpを見てみる
 
-ログインできた後は redirect()->intended($this->redirectPath()); を呼んでいます。
+ログインできた後は `redirect()->intended($this->redirectPath());` を呼んでいます。
 これは、認証フィルターでキャッチされる前にアクセスしたURLへリダイレクトさせる処理です。
 
 `AuthenticatesUsers.php`
