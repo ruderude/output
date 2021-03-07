@@ -12,8 +12,8 @@
 - CommonJS
 - ES modules
 
-CommonJSはサーバーサイドで使用する。
-主にES modulesを使い、必要に応じてCommonJSも使用する。
+CommonJSはサーバーサイドで使用する形式。
+今回はブラウザのES modulesを使うやり方を紹介していきます。
 
 ※ここに少し詳しく書いてあります  
 [JSモジュール化するしくみの規格はCommonJS、AMD、UMD、ES6(ES2015)の4つ](http://ytyaru.hatenablog.com/entry/2019/03/29/000000)
