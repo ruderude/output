@@ -1,6 +1,8 @@
 [トップページ](../index.md)  
 
-# モジュールの基礎
+# モジュールについて
+
+## モジュールの基礎
 
 しまぶーのIT大学のモダンJavaScript講座（モジュール編）を観てまとめてみました  
 [モダンJavaScript講座](https://youtube.com/playlist?list=PLwM1-TnN_NN4SV6DEs4OtfA51Up6XzTfB)
@@ -193,8 +195,8 @@ main.jsとsub.jsを外部にきって。。。
 <body>
     <div id="main"></div>
 
+    <!-- 読み込みはmain.jsのみ -->
     <script type="module" src="./main.js"></script>
-    <script type="module" src="./sub.js"></script>
 
 </body>
 
@@ -271,15 +273,97 @@ import { name1 as myName1, name2 } from 'src/mylib'; //別名を付けてimport
 
 <br>
 
-### Default import / exportの書き方をマスターしよう！
+### Default import/exportの書き方をマスターしよう！
 
-動画内でもいきなり「こちらは使うべきではない」と言っています
+動画内でもいきなり「こちらは使うべきではない(Default import/export)」と言っています。
+「デフォルト」って書かれてると、こちらを優先的に使いたくなりますよね・・・w
 
 主なデメリット
 
-- エディタ上で補完が効きにくくなる
-- import/export時のタイポに気づきにくい
-- リファクタリング時に名前が違うことによって検出しにくい
+- **エディタ上で補完が効きにくくなる**
+- **import/export時のタイポに気づきにくい**
+- **リファクタリング時に名前が違うことによって検出しにくい**
+
+#### export側
+
+```js
+
+export default const name = "訓志"; // エラー！これはできません。変数はカンマ区切りで複数定義できるため直接のexport defaultはできません。
+
+export default "訓志"; // まず書かないが値を直接exportすることは可能。
+
+export default const function hogehoge(){
+    // 関数をexport default。宣言と同時にexport defaultする場合は識別子のない無名関数でもOK
+};
+
+export default class MyClass {
+    // クラスをexport default。宣言と同時にexport defaultする場合は識別子のない無名クラスでもOK
+}
+
+export default name; //変数をexport defaultする場合はこの書き方。
+
+// これは例を書いています。export default は１ファイルに1回しか使えません!!
+```
+
+↓こんな感じで書くこともできる。
+
+```js
+
+const name = "訓志"; // 変数をexport default
+
+export const function hogehoge(){ ... }; // これは名前付きexport
+
+export class MyClass { ... } // これも名前付きexport
+
+export default name; // これと下のコードは同じ
+
+export default "訓志"; // export defaultは評価された値をexportするので、上のコードはこのコードと同じ意味になります。つまり名前を見ていません。
+```
+
+#### import側
+
+上のexportを受けとる。
+
+```js
+import name from './sub.js'; // export defaultをimport
+
+import anotherName from './sub.js'; // export default側は評価された値をexportしているので勝手な名前を付けられる。
+
+import name, { hogehoge, MyClass } from './sub.js'; // 名前付きexportと一緒にimportの場合
+
+```
+
+<br>
+
+### モジュールの特殊な Import / Export について学ぼう
+
+
+#### all importについて
+
+まとめてimportして、ドット記法でアクセスできる。
+
+
+```js
+// sub.js
+
+const kunshi = "訓志";
+const sid = "シド";
+
+export { kunshi, sid };
+
+```
+
+```js
+// main.js
+
+import * as allName from './sub.js';
+
+console.log( allName.kunshi ); // 訓志
+console.log( allName.sid ); // シド
+
+```
+
+#### Re-Exportについてはまた今度。。。
 
 ### まとめ
 
@@ -288,5 +372,6 @@ import { name1 as myName1, name2 } from 'src/mylib'; //別名を付けてimport
 - **基本的にはES modulesの仕様で「名前付きexport/import」を使う。**
 - **エイリアス（別名）はそのファイル内で使いやすいようにimportで行う。**
 
+[トップページ](../index.md)  
 
 
