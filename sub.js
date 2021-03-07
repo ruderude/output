@@ -1,0 +1,1 @@
+export const name = "訓志";
