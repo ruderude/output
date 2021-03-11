@@ -3,16 +3,19 @@ layout: default
 title: トップページですよ
 ---
 
-# 今更ですが、Markdownについてまとめてみます
+# マークダウンによるアウトプットメモ
 
 こんにちは。
 開発チームのkunshiです。
+アウトプットを記録。
+目次より下はマークダウンの書き方の例が置いてあるだけです。
 
 ##　もくじ
 
 [webpackについて](./JavaScript/webpack.md)  
 [Laravelでログイン後、直前のページに遷移したい](./laravel/auth_redirect.md)  
 [モジュールについて](./JavaScript/module.md)
+[議事録の書き方](./business/Minutes.md)
 
 
 ## Markdown という文書フォーマットをご存知の方は多数いると思いますし、常用されている方も多いと思います
