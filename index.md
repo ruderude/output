@@ -32,8 +32,6 @@ title: トップページですよ
 
 [webpackについて](./JavaScript/webpack.md)
 [Laravelでログイン後、直前のページに遷移したい](./laravel/auth_redirect.md)  
-[セカンドページ](./second.md)
-[ビヨンドのコーポレートサイト](https://beyondjapan.com)
 
 ```php
 <?php
