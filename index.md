@@ -1,5 +1,4 @@
 ---
-layout: default
 title: トップページですよ
 ---
 
@@ -67,4 +66,12 @@ Column A | Column B | Column C
 >引用したい文章<br>
 >引用したい文章<br>
 
-引用したい文章
+### PlantUML記法
+
+```uml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+```
