@@ -16,6 +16,7 @@ title: トップページですよ
 [モジュールについて](./JavaScript/module.md)  
 [議事録の書き方](./business/Minutes.md)  
 [テーブル結合(inner joinとouter join)](./DB/join1.md)  
+[Gatsby公式チュートリアルでややハマったこと](./JavaScript/Gatsby/tutorial.md)  
 
 
 ## Markdown という文書フォーマットをご存知の方は多数いると思いますし、常用されている方も多いと思います
